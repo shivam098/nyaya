@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Nyaya — Legal Co-Pilot</title>
+<script>
+  // Current address of the Nyaya app. Updated automatically when the tunnel restarts.
+  var NYAYA_TARGET = 'https://lighting-dvd-segments-ham.trycloudflare.com';
+  // Keep the path after /nyaya (e.g. /share/<token>), the query string and the hash.
+  var rest = location.pathname.replace(/^\/nyaya\/?/, '/') + location.search + location.hash;
+  location.replace(NYAYA_TARGET.replace(/\/$/, '') + rest);
+</script>
+<style>body{font-family:system-ui,sans-serif;background:#f7f5f0;color:#27272a;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}a{color:#92400e}</style>
+</head>
+<body>
+<p>Opening Nyaya… If nothing happens, <a id="go" href="https://lighting-dvd-segments-ham.trycloudflare.com">tap here</a>.</p>
+<script>document.getElementById('go').href = NYAYA_TARGET.replace(/\/$/, '') + rest;</script>
+</body>
+</html>
